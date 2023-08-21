@@ -8,12 +8,12 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const ejsMate = require("ejs-mate");
 const methodOverride = require("method-override");
-const port = 3000;
+const port = process.env.PORT || 3000;
 const ExpressError = require("./utils/ExpressError");
 const mongoSanitize = require("express-mongo-sanitize");
 const helmet = require("helmet");
 const mongoose = require("mongoose");
-const dbUrl = process.env.DB_URL ||'mongodb://127.0.0.1:27017/yelp-camp';
+const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/yelp-camp';
 //mongodb://127.0.0.1:27017/yelp-camp
 
 // const { MongoClient, ServerApiVersion } = require('mongodb');
