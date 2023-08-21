@@ -51,7 +51,7 @@ db.once("open", () => {
   console.log("Db connected");
 });
 
-//session,flash
+//for session,flash
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const secret = process.env.SECRET || 'thisismysecret'
